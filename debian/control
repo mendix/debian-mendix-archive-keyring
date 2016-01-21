@@ -1,0 +1,25 @@
+Source: debian-mendix-archive-keyring
+Section: misc
+Priority: extra
+Maintainer: Hans van Kranenburg <hans.van.kranenburg@mendix.com>
+Build-Depends: debhelper (>> 7), gnupg
+Standards-Version: 3.9.5
+
+Package: debian-mendix-archive-keyring
+Architecture: all
+Multi-Arch: foreign
+Depends: gpgv, apt, ${misc:Depends}
+Recommends: gnupg
+Breaks: apt (<< 0.7.25.1), debian-mendix-keyring (<< 2016.01.21)
+Replaces: debian-archive-keyring (<< 2016.01.21)
+Description: GnuPG archive keys of the mendix debian archive
+ The mendix debian archive digitally signs its Release files. This package
+ contains the archive keys used for that.
+ 
+Package: debian-mendix-keyring
+Depends: debian-mendix-archive-keyring, ${misc:Depends}
+Architecture: all
+Priority: extra
+Section: oldlibs
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.

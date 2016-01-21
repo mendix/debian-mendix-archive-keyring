@@ -1,0 +1,7 @@
+debian-mendix-archive-keyring (2016.01.21) unstable; urgency=medium
+
+  * Initial release based on the debian-ports-archive-keyring package.
+  * Replace debian-mendix-keyring, this is the archive key, not developer
+    public keys.
+
+ -- Hans van Kranenburg <hans.van.kranenburg@mendix.com>  Thu, 21 Jan 2016 16:37:00 +0100
